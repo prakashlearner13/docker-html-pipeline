@@ -1,10 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Hello from Docker!</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Docker Pipeline Test</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 80px;
+      background-color: #f4f4f9;
+    }
+    h1 {
+      color: #007bff;
+    }
+    .timer {
+      font-size: 24px;
+      color: #333;
+      margin-top: 20px;
+    }
+  </style>
+  <!-- Auto-refresh every 10 seconds -->
+  <meta http-equiv="refresh" content="10">
 </head>
 <body>
-  <h1>Welcome to My First Docker Container</h1>
-  <p>This web page is running inside Docker 🚀</p>
+  <h1>Welcome to My Docker Pipeline 🚀</h1>
+  <p>This page auto-refreshes every 10 seconds.</p>
+  <div class="timer">Current Time: <span id="clock"></span></div>
+
+  <script>
+    function updateClock() {
+      const now = new Date();
+      document.getElementById("clock").innerText = now.toLocaleTimeString();
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+  </script>
 </body>
 </html>
