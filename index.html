@@ -12,7 +12,11 @@
       background-color: #f4f4f9;
     }
     h1 {
-      color: #007bff;
+      font-size: 2em;
+    }
+    .color-word {
+      transition: color 0.5s ease;
+      padding: 0 5px;
     }
     .timer {
       font-size: 24px;
@@ -24,17 +28,9 @@
   <meta http-equiv="refresh" content="10">
 </head>
 <body>
-  <h1>Welcome to My Docker Pipeline 🚀</h1>
-  <p>This page auto-refreshes every 10 seconds.</p>
-  <div class="timer">Current Time: <span id="clock"></span></div>
-
-  <script>
-    function updateClock() {
-      const now = new Date();
-      document.getElementById("clock").innerText = now.toLocaleTimeString();
-    }
-    setInterval(updateClock, 1000);
-    updateClock();
-  </script>
-</body>
-</html>
+  <h1>
+    <span class="color-word" id="word1">Welcome</span>
+    <span class="color-word" id="word2">to</span>
+    <span class="color-word" id="word3">My</span>
+    <span class="color-word" id="word4">Docker</span>
+    <span class="color-w
