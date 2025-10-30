@@ -1,0 +1,22 @@
+name: Deploy to Local Docker (Simulated)
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Pull Docker image from Docker Hub
+        run: |
+          docker pull prakashlearner13/myfirstdockerimage:latest
+
+      - name: Run container (test deployment)
+        run: |
+          docker run -d -p 8080:80 prakashlearner13/myfirstdockerimage:latest
